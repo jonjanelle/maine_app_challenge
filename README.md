@@ -1,3 +1,3 @@
 # README
 
-API for the Maine App Challenges resource website
+API for the Maine App Challenges resources site
