@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyString
+  name: Resource 1
+  description: Resource 1 Description
   view_count: 1
   type: 1
-  url: MyString
+  url: http://www.resource1.com
 
 two:
-  name: MyString
-  description: MyString
-  view_count: 1
-  type: 1
-  url: MyString
+  name: Resource 2
+  description: Resource 2 Description
+  view_count: 0
+  type: 2
+  url: http://www.resource2.com
