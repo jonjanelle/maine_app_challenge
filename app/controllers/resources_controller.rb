@@ -1,4 +1,4 @@
-require 'pry'
+#require 'pry'
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :update, :destroy]
   # TODO: Figure out an auth scheme...

@@ -48,7 +48,7 @@ group :development, :test do
   # Debug with Pry. https://github.com/pry/pry
   gem 'pry'
   # gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
-  #gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
