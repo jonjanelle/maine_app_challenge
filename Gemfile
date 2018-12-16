@@ -40,7 +40,7 @@ gem "recaptcha", require: "recaptcha/rails"
 
 group :production do 
   gem 'pg'
-  ruby '2.3.8'
+  ruby '2.5.3'
 end
 
 group :development, :test do
