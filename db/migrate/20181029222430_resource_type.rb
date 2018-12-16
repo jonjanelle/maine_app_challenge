@@ -1,4 +1,4 @@
-class ResourceType < ActiveRecord::Migration[5.2]
+class ResourceType < ActiveRecord::Migration[5.1]
   def change
     create_table :resource_types do |t|
       t.string :name, null: false

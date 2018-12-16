@@ -1,4 +1,4 @@
-class JwtBlacklist < ActiveRecord::Migration[5.2]
+class JwtBlacklist < ActiveRecord::Migration[5.1]
   def change
     create_table :jwt_blacklist do |t|
       t.string :jti, null: false

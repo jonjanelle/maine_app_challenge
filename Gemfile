@@ -32,6 +32,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'kaminari'
 
+gem 'listen', '~> 3.1.5'
+
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
 # Google recaptcha helpers
 gem "recaptcha", require: "recaptcha/rails"
 
@@ -43,7 +47,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
-  gem 'sqlite3',  '1.3.10'
+  gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
