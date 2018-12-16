@@ -34,10 +34,11 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Google recaptcha helpers
 gem "recaptcha", require: "recaptcha/rails"
-gem 'pg'
 
 group :production do 
   #gem 'pg'
+  gem 'pg', '~> 0.20'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
