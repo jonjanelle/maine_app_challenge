@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.4'
@@ -41,6 +40,7 @@ gem "recaptcha", require: "recaptcha/rails"
 
 group :production do 
   gem 'pg'
+  ruby '2.3.8'
 end
 
 group :development, :test do
@@ -48,6 +48,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
   gem 'sqlite3'
+  ruby '2.3.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
