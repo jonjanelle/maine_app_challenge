@@ -35,9 +35,9 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Google recaptcha helpers
 gem "recaptcha", require: "recaptcha/rails"
 
+gem 'pg', '~> 0.20'
+
 group :production do 
-  #gem 'pg'
-  gem 'pg', '~> 0.20'
   gem 'rails_12factor'
 end
 
@@ -47,8 +47,6 @@ group :development, :test do
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Debug with Pry. https://github.com/pry/pry
   gem 'pry'
-  # gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
-  gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

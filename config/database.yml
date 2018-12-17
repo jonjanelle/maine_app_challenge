@@ -1,19 +1,21 @@
 default: &default
+  adapter: postgresql
   timeout: 5000
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   encoding: unicode
 
 development:
   <<: *default
-  adapter: sqlite3
-  database: db/development.sqlite3
+  database: maine_app_dev
+  username: postgres
+  password: password
 
 test:
   <<: *default
-  adapter: sqlite3
-  database: db/test.sqlite3
+  database: maine_app_test
+  username: postgres
+  password: password
 
 production:
   <<: *default
-  adapter: postgresql
-  database: mac_production
+  database: maine_app_production

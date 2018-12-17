@@ -9,10 +9,10 @@ class ResourcesController < ApplicationController
   def index
     result = nil
     if params[:name]
-      result = Resource.where("name like ?", "%#{params[:name]}%")
+      result = Resource.where("name ILIKE ?", "%#{params[:name].parameterize}%")
     end
     if params[:resource_type_id]
-      result = result.nil? ? Resource.where("resource_type_id like ?", "%#{params[:resource_type_id]}%") : result.where("resource_type_id like ?", "%#{params[:resource_type_id]}%") 
+      result = result.nil? ? Resource.where(resource_type_id: params[:resource_type_id]) : result.where(resource_type_id: params[:resource_type_id]) 
     end
     if result.nil? 
       result = Resource.all
