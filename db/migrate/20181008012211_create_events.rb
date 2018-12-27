@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration[5.1]
       t.string :name, null: false
       t.string :description, null: false
       t.integer :max_participants
-      t.integer :cost, null: false
+      t.integer :cost, null: false, default: 0
       t.datetime :start_date
       t.datetime :end_date
       t.string :contact_first

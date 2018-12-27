@@ -15,6 +15,7 @@ Resource.create(name: "Getting Started with App Inventor",
                 resource_type_id: 1,
                 is_approved: true)
 
+
 Resource.create(name: "Android Xamarin getting started", 
                 description: "Learn to create powerful Android apps using Microsoft's Xamarin tools and C#", 
                 url: "https://docs.microsoft.com/en-us/xamarin/android/", 
