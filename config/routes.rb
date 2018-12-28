@@ -29,4 +29,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :resource_descriptions, only: [:index, :show] do
+    collection do
+    end
+    member do 
+    end
+  end
+
 end
