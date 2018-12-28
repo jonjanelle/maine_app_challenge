@@ -112,7 +112,7 @@ ResourceCategory.create(resource_id: Resource.last.id,
 ResourceCategory.create(resource_id: Resource.last.id,
                         category_id: Category.where(name: "iOS").first.id)
 ResourceCategory.create(resource_id: Resource.last.id,
-                        category_id: Category.where(name: "Code.org").first.id)
+                        category_id: Category.where(name: "Code.org App Lab").first.id)
 
 
 
@@ -147,4 +147,4 @@ ResourceCategory.create(resource_id: Resource.last.id,
 ResourceCategory.create(resource_id: Resource.last.id,
                 category_id: Category.where(name: "iOS").first.id)
 ResourceCategory.create(resource_id: Resource.last.id,
-                category_id: Category.where(name: "Code.org").first.id)
+                category_id: Category.where(name: "Code.org App Lab").first.id)
