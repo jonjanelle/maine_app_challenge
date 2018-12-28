@@ -12,7 +12,7 @@ Category.create(name: "Android",
                 description: "Learn about creating Android apps")
 Category.create(name: "iOS", 
                 description: "Learn about creating Apple iOS apps")
-Category.create(name: "Code.org", 
+Category.create(name: "Code.org App Lab", 
                 description: "Learn about creating apps with Code.org's App Lab")
 Category.create(name: "MIT App Inventor", 
                 description: "Learn about creating apps with the MIT App Inventor")
