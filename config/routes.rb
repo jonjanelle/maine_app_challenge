@@ -18,6 +18,8 @@ Rails.application.routes.draw do
       get :get_featured
     end
     member do 
+      post :like
+      post :dislike
     end
   end
 

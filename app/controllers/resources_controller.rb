@@ -54,6 +54,30 @@ class ResourcesController < ApplicationController
     render json: Resource.where(is_featured: true), status: :ok
   end
 
+  # post resources/1/like
+  def like
+    prev_likes = ResourceLike.where(resource_id: params[:id], client_id: request.remote_ip, value: 1)
+    if prev_likes.empty?
+      ResourceLike.where(resource_id: params[:id], client_id: request.remote_ip).destroy_all
+      ResourceLike.create(resource_id: params[:id], client_id: request.remote_ip, value: 1)
+      render json: {}, status: :ok
+    else 
+      render json: {message: "Cannot like more than once."}, status: :bad_request
+    end 
+  end
+
+  # post resources/1/dislike
+  def dislike
+    prev_dislikes = ResourceLike.where(resource_id: params[:id], client_id: request.remote_ip, value: -1)
+    if prev_dislikes.empty?
+      ResourceLike.where(resource_id: params[:id], client_id: request.remote_ip).destroy_all
+      ResourceLike.create(resource_id: params[:id], client_id: request.remote_ip, value: -1)
+      render json: {}, status: :ok
+    else 
+      render json: {message: "Cannot dislike more than once."}, status: :bad_request
+    end 
+  end
+
   def ping
     render :ok
   end

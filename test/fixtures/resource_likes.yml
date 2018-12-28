@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  resource: one
+  client_id: MyString
+  value: 1
+
+two:
+  resource: two
+  client_id: MyString
+  value: 1

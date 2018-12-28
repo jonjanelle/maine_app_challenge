@@ -25,7 +25,16 @@ class ResourceDescriptionsController < ApplicationController
     private
 
       def build_response(resource_collection) 
-        [] if resource_collection.nil? else resource_collection.map { |r| ({"resource": r, "categories": r.resource_categories.map(&:category)}) }
+        if resource_collection.nil?
+          []
+        else
+          resource_collection.map do |r|
+            ({"resource": r, 
+            "categories": r.resource_categories.map(&:category),
+            "likes": r.resource_likes.where(resource_id: r.id, value: 1).count, 
+            "dislikes": r.resource_likes.where(resource_id: r.id, value: -1).count})
+          end
+        end
       end
   
   end
