@@ -9,12 +9,14 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :first_name, default: nil
       t.string :last_name, default: nil
 
+      t.boolean :is_admin, null: false, default: false
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
       ## Rememberable
-      t.datetime :remember_created_at
+      # t.datetime :remember_created_at
 
       ## Trackable
       t.integer  :sign_in_count, default: 0, null: false

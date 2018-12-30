@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   # devise :database_authenticatable, :registerable,
   #        :recoverable, :rememberable, :validatable
-  has_secure_password
+  # has_secure_password
   validates_presence_of :email
   validates_uniqueness_of :email, case_sensitive: false
   validates_format_of :email, with: /@/
@@ -11,7 +11,11 @@ class User < ApplicationRecord
   #before_create :generate_confirmation_instructions
   
   devise :database_authenticatable,
-         :jwt_authenticatable, jwt_revocation_strategy: JWTBlacklist
+         :registerable,
+
+         :trackable,
+         :jwt_authenticatable, 
+         jwt_revocation_strategy: JWTBlacklist
 
   
   def downcase_email
