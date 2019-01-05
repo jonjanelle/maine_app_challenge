@@ -55,4 +55,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :resource_categories, only: [:create] do 
+    collection do
+    end
+    member do 
+    end
+  end
+
 end
