@@ -96,7 +96,7 @@ class ResourcesController < ApplicationController
     def resource_params
       params.require(:resource).permit(:name, :description, :is_approved,
                                        :resource_type_id, :url, :image_url, 
-                                       :is_featured)
+                                       :is_featured )
     end
 
 end
