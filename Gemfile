@@ -46,7 +46,8 @@ group :development, :test do
   # byebug failing to build locally with ruby 2.4.x, but ruby 2.5.x fails with sqlite3. 2.3.3 works, but not supported by heroku. Blah.
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Debug with Pry. https://github.com/pry/pry
-  gem 'pry'
+  # gem 'pry'
+  # gem 'byebug'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

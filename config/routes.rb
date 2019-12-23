@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
-  devise_for :users, defaults: { format: :json } #, controllers: { sessions: 'sessions_controller' }
+  devise_for :users,
+             path: '',
+             path_names: {
+               sign_in: 'login',
+               sign_out: 'logout',
+               registration: 'signup'
+             },
+             controllers: {
+               sessions: 'sessions',
+               registrations: 'registrations'
+             }
 
   resources :events do 
     collection do 
@@ -32,6 +42,20 @@ Rails.application.routes.draw do
   end
 
   resources :resource_descriptions, only: [:index, :show] do
+    collection do
+    end
+    member do 
+    end
+  end
+
+  resources :categories, only: [:index] do 
+    collection do
+    end
+    member do 
+    end
+  end
+
+  resources :resource_categories, only: [:create] do 
     collection do
     end
     member do 

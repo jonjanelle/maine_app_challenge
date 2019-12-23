@@ -1,4 +1,3 @@
-#require 'pry'
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :update, :destroy]
   # TODO: Figure out an auth scheme
@@ -23,6 +22,7 @@ class ResourcesController < ApplicationController
     render json: @resource, status: :ok
   end
 
+  
   # POST /resources
   def create
     @resource = Resource.new(resource_params)
@@ -34,6 +34,7 @@ class ResourcesController < ApplicationController
       render json: @resource.errors, status: :bad_request
     end
   end
+
 
   # PATCH/PUT /resources/1
   def update
@@ -94,7 +95,8 @@ class ResourcesController < ApplicationController
 
     def resource_params
       params.require(:resource).permit(:name, :description, :is_approved,
-                                       :resource_type_id, :url, :image_url, :is_featured )
+                                       :resource_type_id, :url, :image_url, 
+                                       :is_featured )
     end
 
 end
